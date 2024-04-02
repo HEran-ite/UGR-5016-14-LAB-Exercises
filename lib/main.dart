@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lab2/pages/page1.dart';
 import 'package:lab2/pages/page2.dart';
+import 'package:lab2/pages/page3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-        home: page2(),
+        home: page3(),
       
     );
   }
