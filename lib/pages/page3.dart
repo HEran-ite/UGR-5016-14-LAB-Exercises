@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 
 class page3 extends StatelessWidget {
   const page3({super.key});
@@ -25,46 +27,99 @@ class page3 extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-            ElevatedButton(onPressed: (){}, child: Icon(Icons.male,size: 100,)
-            ,),
-            ElevatedButton(onPressed: (){}, child: Icon(Icons.female,size: 100,))
+              Container(
+                color: Colors.black,
+                padding: EdgeInsets.symmetric(horizontal: 30,vertical: 30),
+                child: Icon(Icons.male,size: 100,color: Colors.white,),
+              ),
+           
+            Container(
+              color: Colors.black,
+                padding: EdgeInsets.symmetric(horizontal: 30,vertical: 30),
+                child: Icon(Icons.male,size: 100,color: Colors.white,),
+              ),
           ],),
-          Column(children: [
-            Text('height'),
-            Text('176'),
-            Icon(Icons.add)
-
-          ],),
+          Container(
+            margin: EdgeInsets.symmetric(horizontal: 30),
+            color: Colors.black,
+            child: Column(children: [
+              Text(' HEIGHT ',
+                style: TextStyle(
+                  color:Colors.white,
+                  fontSize: 18
+                ),),
+              Text(' 176 ',
+                style: TextStyle(
+                  color:Colors.white,
+                  fontSize: 38
+                ),),
+              Slider(
+                    value: 174, // Initial value of the slider
+                    min: 0,
+                    max: 200,
+                    onChanged: (value) {
+                      // Handle slider value change here
+                    },
+                  ),
+            
+            ],),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children:[ Column(children: [
-              Text('Weight'),
-            Text('60'),
-            Row(children: [
-              Icon(Icons.minimize),
-              Icon(Icons.add_circle)
-            ],),
-            
-            ],),
-            Column(children: [
-              Text('Weight'),
-            Text('60'),
-            Row(children: [
-              Icon(Icons.minimize),
-              Icon(Icons.add_circle)
-            ],),
-            
-            ],),
+            children:[ Container(
+              padding: EdgeInsets.symmetric(horizontal: 50,vertical: 30),
+              color: Colors.black,
+              child: Column(
+                
+                children: [
+                Text(' WEIGHT ',
+                style: TextStyle(
+                  color:Colors.white,
+                  fontSize: 18
+                ),),
+              Text(' 23 ',
+                style: TextStyle(
+                  color:Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 28
+                ),),
+              Row(children: [
+                Icon(Icons.minimize,color: Colors.white,),
+                Icon(Icons.add_circle,color: Colors.white)
+              ],),
+              
+              ],),
+            ),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 50,vertical: 30),
+              color: Colors.black,
+              child: Column(
+                
+                children: [
+                Text(' AGE ',
+                style: TextStyle(
+                  color:Colors.white,
+                  fontSize: 18
+                ),),
+              Text(' 23 ',
+                style: TextStyle(
+                  color:Colors.white,
+                   fontWeight: FontWeight.bold,
+                  fontSize: 28
+                ),),
+              Row(children: [
+                Icon(Icons.minimize,color: Colors.white,),
+                Icon(Icons.add_circle,color: Colors.white)
+              ],),
+              
+              ],),
+            ),
           ])
         ],),
       ) ,
       bottomNavigationBar: BottomAppBar(
-        
-        child: ElevatedButton(onPressed: (){},child: Text('CALCULATE',
-        style: TextStyle(color: Colors.purple,),
-        
-        
-        ),)
+        color: Colors.purple,
+        child: Container(child: Center(child:Text('calculate',style: TextStyle(color: Colors.white,fontSize: 30),),))
       ),
     );
   }
