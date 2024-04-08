@@ -19,6 +19,15 @@ class MyApp extends StatelessWidget {
         '/screen2':(context) => screenTwo(),
 
       },
+      //  onGenerateRoute: (RouteSettings settings) {
+      //  switch (settings.name) {
+      //    case '/':
+      //      return MaterialPageRoute(builder: (context) => screenOne());
+      //    case '/screen2':
+      //      return MaterialPageRoute(builder: (context) => screenTwo());
+      //  }
+      //  }
+
     );
   }
 }
